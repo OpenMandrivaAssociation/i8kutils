@@ -1,17 +1,18 @@
 %define	name	i8kutils
-%define	version	1.25
-%define	release	%mkrel 2
+%define	version	1.27
+%define	release	%mkrel 1
 
 Version: 	%{version}
 Summary: 	Dell laptop SMM BIOS support
 Name: 		%{name}
 Release: 	%{release}
-License: 	GPL
+License: 	GPLv2+
 Group: 		Monitoring
-Source: 	http://people.debian.org/~dz/i8k/%{name}_%{version}.tar.gz
-URL: 		http://people.debian.org/~dz//i8k/	
-BuildRequires:	gtk+1.2-devel
+Source: 	http://ftp.debian.org/debian/pool/main/i/i8kutils/%{name}_%{version}.tar.gz
+URL: 		http://people.debian.org/~dz/i8k/	
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Requires:	tcl
+Requires:	tk
 
 %description
 This package contains a user-space programs for accessing the SMM BIOS
@@ -33,12 +34,12 @@ Note that you need the "Dell Laptop" option compiled into your kernel
 %install
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT%_bindir
-make PREFIX=$RPM_BUILD_ROOT%_prefix install
+%makeinstall_std
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr (-,root,root)
-%doc README.* COPYING 
+%doc README.*
 %{_bindir}/*
