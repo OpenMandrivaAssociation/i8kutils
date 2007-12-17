@@ -10,7 +10,6 @@ License: 	GPLv2+
 Group: 		Monitoring
 Source: 	http://ftp.debian.org/debian/pool/main/i/i8kutils/%{name}_%{version}.tar.gz
 URL: 		http://people.debian.org/~dz/i8k/	
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	tcl
 Requires:	tk
 
