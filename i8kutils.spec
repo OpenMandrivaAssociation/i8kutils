@@ -1,6 +1,6 @@
 %define	name	i8kutils
 %define	version	1.27
-%define	release	%mkrel 3
+%define	release	%mkrel 4
 
 Version: 	%{version}
 Summary: 	Dell laptop SMM BIOS support
