@@ -13,6 +13,7 @@ URL: 		https://people.debian.org/~dz/i8k/
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Suggests:	i8kmon
 
+BuildRequires:	make
 %description
 This package contains a user-space programs for accessing the SMM BIOS
 of Dell Inspiron and Latitude laptops. The SMM BIOS is used on many recent
